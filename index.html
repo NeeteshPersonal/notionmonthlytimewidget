@@ -49,9 +49,8 @@
     <div id="counter">
 
         <h2 class="box" id="days"></h2>
-        <h2 class="box" id="hours"></h2>
         <h3>
-            Left in <br>This Month
+            Left In <br>This Month
         </h3>
     </div>
 
@@ -60,17 +59,17 @@
 <script>
     function CountDownTimer  () {
     left_days = document.getElementById("days");
-    left_hours = document.getElementById("hours");
+    //left_hours = document.getElementById("hours");
     }
     function showRemaining (){
     now = new Date();
     days_in_this_month = new Date( now.getFullYear(), now.getMonth()+1, 0).getDate(); 
     days = days_in_this_month- now.getDate();
-    hours = 23 - now.getHours();
+    //hours = 23 - now.getHours();
     minutes = 59 - now.getMinutes();
     seconds = 59 - now.getSeconds();
     left_days.innerHTML = days + "<br> <span class=\"small\"> days </span>"
-    left_hours.innerHTML = hours + "<br> <span class=\"small\"> hours</span>";
+    //left_hours.innerHTML = hours + "<br> <span class=\"small\"> hours</span>";
     }
 
 timer = setInterval (showRemaining, 1000) 
